@@ -277,8 +277,8 @@ def train(
                     break  # only update every once in a while
                 agent.update(sac_buffer, logger, updates_made)
                 updates_made += 1
-                if not silent and updates_made % cfg.log_frequency_agent == 0:
-                    logger.dump(updates_made, save=True)
+                #if not silent and updates_made % cfg.log_frequency_agent == 0:
+                #    logger.dump(updates_made, save=True)
 
             # ------ Epoch ended (evaluate and save model) ------
             if (env_steps + 1) % cfg.overrides.epoch_length == 0:

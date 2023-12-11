@@ -51,6 +51,8 @@ class ModelTrainer:
         agent=None,
     ):
         self.model = model
+        print('num_elites')
+        print(self.model.num_elites)
         self._train_iteration = 0
         assert model_loss_type in ["mle", "va"]
         self.model_loss_type = model_loss_type
